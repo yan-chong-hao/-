@@ -1,0 +1,10 @@
+/* Let the work itself carry the colour palette. */
+.gallery-item img{filter:none}
+.gallery-item:hover img{filter:none;transform:scale(1.045)}
+.portrait img{filter:none}
+
+/* Preserve every photograph's native aspect ratio in a masonry layout. */
+.gallery{display:block;column-count:4;column-gap:12px}
+.gallery-item,.gallery-item:nth-child(7n+2),.gallery-item:nth-child(7n+6),.gallery-item:nth-child(7n+4){display:block;width:100%;height:auto;min-height:0;margin:0 0 12px;break-inside:avoid;grid-column:auto;grid-row:auto}
+.gallery-item img{height:auto;object-fit:contain}
+@media(max-width:850px){.gallery{display:block;column-count:2;column-gap:8px}.gallery-item,.gallery-item:nth-child(7n+2),.gallery-item:nth-child(7n+6),.gallery-item:nth-child(7n+4){height:auto;margin-bottom:8px}}
